@@ -6,9 +6,7 @@ cgitb.enable()
 # Every time a paste is created, metadata is saved to a file, which is
 # used for the index. Formatted like title<author<unix_timestamp
 paste_log = "./pastes.txt"
-
-# Number of static files (all files in directory which are not pastes)
-sf_num = 5
+paste_cnt = len([i for i in os.listdir() if i[-4:] == '.txt']) - 1
 
 # Dates are rendered according to strftime
 time_form = '%Y-%m-%d %H:%M'
@@ -122,7 +120,7 @@ def new_paste():
             p_author = "Anonymous"
         else:
             p_author = get_form('author')[:12]
-        p_num = str(len(os.listdir()) - sf_num + 1).zfill(3)
+        p_num = str(paste_cnt).zfill(3)
         p_time = fancy_time('', 'unix')
         p_data = []
         p_data.append(p_author + " " + p_time)
