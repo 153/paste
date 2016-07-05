@@ -1,0 +1,33 @@
+a {
+    color: darkgreen;
+}
+
+body {
+    background-color: #dcdcdc;
+    padding: 2% 0 0 4%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 6px;
+}
+
+th {
+    background-color: #333;
+    color: #ddd;
+}
+
+td {
+    background-color: #fdfdfd;
+}
+
+textarea {
+    height: 40%;
+    width: 80%;
+}
+	
